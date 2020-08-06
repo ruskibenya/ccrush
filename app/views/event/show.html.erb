@@ -1,0 +1,21 @@
+
+<h1>Welcome to the awesome dating event, <%= current_user.first_name %>!</h1>
+
+<h3>Today is <%= @event.date.strftime("%Y-%m-%d") %></h3>
+
+<h3>Today you will be dating:</h3>
+<ul>
+  <% if @hosts.include?(current_user) %>
+    <% @visitors.each do |visitor| %>
+      <li><%= visitor.first_name %></li>
+    <% end %>
+  <% elsif @visitors.include?(current_user) %>
+    <% @hosts.each do |host| %>
+      <li><%= host.first_name %></li>
+    <% end %>
+  <% end %>
+</ul>
+
+<% if @visitors.include?(current_user) %>
+  <%= link_to "Next Date", event_path(@event, pos_counter: @pos_counter)%>
+<% end %>

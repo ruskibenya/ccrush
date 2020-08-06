@@ -159,27 +159,33 @@ puts "creating some events"
 puts "creating event one"
 event_one = Event.new({
   date: DateTime.new(2020, 8,3.75),
-  subscribers: [user_three, user_four, user_five],
-  publishers: [user_six, user_seven, user_eight],
+  publishers: [user_two, user_three, user_four, user_five],
+  subscribers: [user_one, user_six, user_seven, user_eight],
   user: user_admin
 })
+
+event_one.save!
 
 
 puts "creating event two"
 event_two = Event.new({
   date: DateTime.new(2020, 8,3.75),
-  subscribers: [user_three, user_four, user_five],
-  publishers: [user_six, user_seven, user_eight],
+  publishers: [user_two, user_three, user_four, user_five],
+  subscribers: [user_one, user_six, user_seven, user_eight],
   user: user_admin
 })
+
+event_two.save!
 
 puts "creating event three"
 event_three = Event.new({
   date: DateTime.new(2020, 8,3.75),
-  subscribers: [user_three, user_four, user_five],
-  publishers: [user_six, user_seven, user_eight],
+  publishers: [user_two, user_three, user_four, user_five],
+  subscribers: [user_one, user_six, user_seven, user_eight],
   user: user_admin
 })
+
+event_three.save!
 
 puts "creating some meetings!"
 
