@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'meeting/index'
   get 'meeting/show'
   get 'event/index'
+  get 'event/end'
   resources :event, only: [:index, :show, :new, :create]
   devise_for :users
   root to: 'pages#home'

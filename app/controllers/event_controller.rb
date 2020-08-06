@@ -9,23 +9,30 @@ class EventController < ApplicationController
     @visitors = @event.subscribers
 
     if @visitors.include?(current_user)
-      unless params["pos_counter"]
+      unless params["date_counter"]
         if @hosts.include?(current_user)
-          @pos_counter = @hosts.index(current_user)
+          @date_counter = @hosts.index(current_user)
         else
-          @pos_counter = @visitors.index(current_user)
+          @date_counter = @visitors.index(current_user)
         end
       else
-        @pos_counter = params["pos_counter"].to_i + 1
+        @date_counter = params["date_counter"].to_i + 1
       end
     end
 
+    @session_owner = @hosts[@date_counter]
 
+    if @date_counter == @event.publishers.length
+      redirect_to event_end_path
+    end
+  end
+
+  def end
   end
 
   private
   def event_params
-      params.require(:event).permit(:next_host)
+      params.require(:event).permit(:date_counter)
   end
 
   def set_event
