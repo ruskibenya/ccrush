@@ -49,13 +49,14 @@ class EventController < ApplicationController
   end
 
   def create_new_session()
-    session = OPENTOK.create_session
-    session_id = session.session_id
-    current_user.session_id = session_id
-    current_user.save
+    # session = OPENTOK.create_session
+    # session_id = session.session_id
+    # current_user.session_id = session_id
+    # current_user.save
+    
     puts current_user.session_id 
 
-    return session_id 
+    return current_user.session_id 
     # token = opentok.generate_token(session_id)
   end
 
