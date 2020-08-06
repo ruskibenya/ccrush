@@ -26,11 +26,17 @@ class EventController < ApplicationController
       @token = OPENTOK.generate_token(@session_id)
 
     else
+      unless params["date_counter"]
+        @date_counter = @hosts.index(current_user)
+      else
+        @date_counter = params["date_counter"].to_i + 1
+      end
+      @current_date = @visitors[@date_counter]
       @session_id = create_new_session
       @token = OPENTOK.generate_token(@session_id)
     end
 
-    
+
 
     if @date_counter == @event.publishers.length
       redirect_to event_end_path
@@ -54,14 +60,14 @@ class EventController < ApplicationController
     # session_id = session.session_id
     # current_user.session_id = session_id
     # current_user.save
-    
-    puts current_user.session_id 
 
-    return current_user.session_id 
+    puts current_user.session_id
+
+    return current_user.session_id
     # token = opentok.generate_token(session_id)
   end
 
   def get_next_session(current_date)
-    @session_id = current_date.session_id 
+    @session_id = current_date.session_id
   end
 end
