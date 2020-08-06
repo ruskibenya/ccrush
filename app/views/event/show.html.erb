@@ -7,6 +7,7 @@
   <% if @hosts.include?(current_user) %>
     <% @visitors.each do |visitor| %>
       <li><%= visitor.first_name %></li>
+      
     <% end %>
   <% elsif @visitors.include?(current_user) %>
     <% @hosts.each do |host| %>
@@ -16,9 +17,13 @@
 </ul>
 
 
-<h1><%= @session_owner.first_name %></h1>
 
+<% if @hosts.include?(current_user)%> 
+  <%= render "meeting/show"  %>
+<% end %> 
 
 <% if @visitors.include?(current_user) %>
   <%= link_to "Next Date", event_path(@event, date_counter: @date_counter)%>
 <% end %>
+
+<script src="https://static.opentok.com/v2/js/opentok.min.js"></script>

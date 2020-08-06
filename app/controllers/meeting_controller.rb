@@ -10,12 +10,17 @@ class MeetingController < ApplicationController
   end
 
   def show
+  
+
     @api_key = ENV['api_key']
-    if first_meeting {
-      @session_id = create_new_session
-    } else {
+    raise
+    # if first_meeting {
+    #   @session_id = create_new_session
+    # } else {
       
-    }
+    # }
+    @session_id = create_testing_session
+
     @token = OPENTOK.generate_token(@session_id)
     @number = 0 
   end

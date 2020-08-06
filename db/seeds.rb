@@ -42,7 +42,8 @@ user_two = User.new({
   bio: "Shooting I do well dating it's very hard to meet quality women years ago I discovered. The fact that you are even considering schooling me pics on request younger women I enjoy someone to provide for you, I don't really keep a budget performance art other shenanigans you should message me you will love it. MFA performance art Ayn Rand I love the smell of most cats eventually love me I'm the last of a dying breed. \nNo robots posing as real people laughing hysterically The Game a fairly successful career in sports. If that paragraph above turned you off a fairly successful career in sports a fairly successful career in sports I won't bite without permission finishing my novel, but I only smoke when drinking dive bars P90X I don't really read much these days wildly attractive doesn't hurt. Working on my screenplay I am a hoarder, but only of top shelf stuff throwing rocks at trains shooting I enjoy I hope there are good girls left.",
   gender: "female",
   looking_for: "male",
-  password: "123456"
+  password: "123456",
+  session_id:"2_MX40Njg3NDgyNH5-MTU5NjcyMzE1NzE0MH5iRTIrUk9mdVhZL2VmK1FRZ3BlWXAybnh-UH4"
 })
 
 user_two.save!
@@ -58,7 +59,8 @@ user_three = User.new({
   bio: "Shooting I do well dating it's very hard to meet quality women years ago I discovered. The fact that you are even considering schooling me pics on request younger women I enjoy someone to provide for you, I don't really keep a budget performance art other shenanigans you should message me you will love it. MFA performance art Ayn Rand I love the smell of most cats eventually love me I'm the last of a dying breed. \nNo robots posing as real people laughing hysterically The Game a fairly successful career in sports. If that paragraph above turned you off a fairly successful career in sports a fairly successful career in sports I won't bite without permission finishing my novel, but I only smoke when drinking dive bars P90X I don't really read much these days wildly attractive doesn't hurt. Working on my screenplay I am a hoarder, but only of top shelf stuff throwing rocks at trains shooting I enjoy I hope there are good girls left.",
   gender: "female",
   looking_for: "male",
-  password: "123456"
+  password: "123456", 
+  session_id:"2_MX40Njg3NDgyNH5-MTU5NjcyMzE0NDc5OX5NMEwrYm9UamxJOXpiVFdBSnJtNm5pNFl-UH4"
 })
 
 user_three.save!
