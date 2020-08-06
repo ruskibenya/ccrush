@@ -18,9 +18,8 @@
 
 
 
-<%# if @hosts.include?(current_user)%>
   <%= render "meeting/show"  %>
-<%# end %>
+
 
 <% if @visitors.include?(current_user) %>
   <%= link_to "Next Date", event_path(@event, date_counter: @date_counter)%>
