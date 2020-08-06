@@ -1,2 +1,11 @@
 // Import page-specific CSS files here.
 @import "home";
+@import "dashboard";
+
+.white-bg{
+  background: white;
+}
+
+.grey-border{
+  border: 1px solid grey;
+}
